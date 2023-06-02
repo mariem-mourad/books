@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const BooksContext = createContext();
 
-function Provider ({ childern }) { 
+function Provider ({ children }) { 
     const [books, setBooks] = useState([]);
 
     const fetchBooks = async () => {
@@ -61,7 +61,7 @@ function Provider ({ childern }) {
 
     return (
         <BooksContext.Provider value={valueToShare}>
-            {childern}
+            {children}
         </BooksContext.Provider>
     );
 }
